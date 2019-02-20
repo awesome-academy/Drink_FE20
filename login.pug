@@ -1,0 +1,32 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#login.login
+        .container
+            .login__title
+                p
+                    a(href='#') Trang chủ/
+                        span Giới thiệu
+                .row
+                    .col-lg-10
+                        h3 đăng nhập
+                        img(src="image/titleleft-dark.png", alt="")
+                    .col-lg-2
+                        button.button đăng kí
+            .login__form
+                .login__form__content
+                    h4 khách hàng đăng nhập 
+                    p Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                    .login__form__input
+                        label(for="email") Email* :
+                        input(type="email",name="email")
+                    .login__form__input
+                        label(for="password") Password* :
+                        input(type="password", name="password")
+                    .login__form__checkbox
+                        label(for="span")
+                        input(class="checkbox", type="checkbox",name="remember")
+                        label Quên mật khẩu
+                    button.button đăng nhập
+    include footer.pug        

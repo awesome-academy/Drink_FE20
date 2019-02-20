@@ -1,0 +1,114 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#address.address
+        .container
+            .address__title
+                p
+                    a(href='#') Trang chủ/
+                        span Địa chỉ
+                h3 Địa chỉ
+                img(src="image/titleleft-dark.png", alt="")
+            .row
+                    .col-lg-6
+                        .address__form
+                            h4 Địa chỉ của bạn
+                            .address__form__input
+                                label(for="name") Tên
+                                input(type="text",name='name', placeholder='Giang')
+                            .address__form__input
+                                label(for="name") Họ & Tên đệm
+                                input(type="text",name='name', placeholder='Lê Anh')
+                            .address__form__input
+                                label(for="company") Công ty
+                                input(type="text",name='company', placeholder='Cổ phần công nghệ DKT')
+                            .address__form__input
+                                label(for="address") Địa chỉ
+                                input(type="text",name='address', placeholder='Tòa nhà Hà Nội Group,442 Đội Cấn, Ba Đình, Hà Nội')
+                            .address__form__input
+                                label(for="city") Thành phố
+                                input(type="text",name='city', placeholder='Hà Nội')
+                            .address__form__input
+                                label(for="nationality") Quốc tịch
+                                input(type="text",name='nationality', placeholder='Việt Nam')
+                            .address__form__input
+                                label(for="postal") Postal/Zip Code
+                                input(type="text",name='postal', placeholder='230089')
+                            .address__form__input
+                                label(for="phone") Phone
+                                input(type="text",name='phone', placeholder='0974554928')
+                            .address__form__checkbox
+                                label(for="span")
+                                input(class='checkbox',type="checkbox")
+                                label.lbaddress Đặt làm địa chỉ mặc định?
+                            .address__form__button
+                                label(for="span")
+                                button.button.btnaddress Chỉnh sửa địa chỉ
+                                button.button Xóa
+                    .col-lg-6
+                        .address__form
+                            .address__form__link
+                                a(href="#") Thêm địa chỉ
+                            .address__form__input
+                                label(for="name") Tên
+                                input(type="text",name='name', placeholder='Giang')
+                            .address__form__input
+                                label(for="name") Họ & Tên đệm
+                                input(type="text",name='name', placeholder='Lê Anh')
+                            .address__form__input
+                                label(for="company") Công ty
+                                input(type="text",name='company', placeholder='Cổ phần công nghệ DKT')
+                            .address__form__input
+                                label(for="address") Địa chỉ
+                                input(type="text",name='address', placeholder='Tòa nhà Hà Nội Group,442 Đội Cấn, Ba Đình, Hà Nội')
+                            .address__form__input
+                                label(for="city") Thành phố
+                                input(type="text",name='city', placeholder='Hà Nội')
+                            .address__form__input
+                                label(for="nationality") Quốc tịch
+                                input(type="text",name='nationality', placeholder='Việt Nam')
+                            .address__form__input
+                                label(for="postal") Postal/Zip Code
+                                input(type="text",name='postal', placeholder='230089')
+                            .address__form__input
+                                label(for="phone") Phone
+                                input(type="text",name='phone', placeholder='0974554928')
+                            .address__form__checkbox
+                                label(for="span")
+                                input(class='checkbox',type="checkbox")
+                                label.lbaddress Đặt làm địa chỉ mặc định?
+                            .address__form__button
+                                label(for="span")
+                                button.button.btnaddress Cập nhật địa chỉ
+                                button.button Thoát
+            - for (var x = 0; x < 2; x++)
+                hr
+                .address__infor
+                    .address__infor__label
+                        label.lbleft(for="name") Tên
+                        label.lbright(for="name") Giang
+                    .address__infor__label
+                        label.lbleft(for="name") Họ & Tên đệm
+                        label.lbright(for="name") Le Anh
+                    .address__infor__label
+                        label.lbleft(for="company") Công ty
+                        label.lbright(for="company") Cổ phần công nghệ DKT
+                    .address__infor__label
+                        label.lbleft(for="address") Địa chỉ
+                        label.lbright(for="address") Tòa nhà Hà Nội Group,442 Đội Cấn, Ba Đình, Hà Nội
+                    .address__infor__label
+                        label.lbleft(for="city") Thành phố
+                        label.lbright(for="city") Hà Nội
+                    .address__infor__label
+                        label.lbleft(for="nationality") Quốc tịch
+                        label.lbright(for="nationality") Việt Nam
+                    .address__infor__label
+                        label.lbleft(for="postal") Postal/Zip Code
+                        label.lbright(for="postal") 230089
+                    .address__infor__label
+                        label.lbleft(for="phone") Phone
+                        label.lbright(for="phone") 0974554928
+                    .address__infor__link
+                        a(href="#") Chỉnh sửa địa chỉ
+    include footer.pug
