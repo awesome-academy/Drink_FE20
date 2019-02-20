@@ -1,0 +1,104 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#detailproduct.detailproduct
+        .container
+            .detailproduct__title
+                p
+                    a(href="index.html") Trang chủ/Sản phẩm/
+                        span Rượu vang đỏ
+            .row
+                .col-lg-6
+                    .detailproduct__img
+                        .row
+                            .col-lg-2
+                                .detailproduct__img__style
+                                    i.fas.fa-arrow-up
+                                    - var list =['detailproduct_1.png','detailproduct_1.png','detailproduct_2.png','detailproduct_3.png','detailproduct_1.png']
+                                        each item in list
+                                            img(src='image/' + item, alt="")
+                                            hr
+                                    i.fas.fa-arrow-down
+                            .col-lg-10
+                                .detailproduct__img__box
+                                    img(src="image/detailblog_box.png", alt="")
+                .col-lg-6
+                    .detailproduct__describition
+                        h2 rượu nho năm 1987
+                        img(src="image/titleleft-dark.png", alt="")
+                        h5 330.000
+                            sup đ
+                        hr
+                        - for (var x = 0; x < 3; x++)
+                            i.fas.fa-star
+                        i.fas.fa-star-half-alt
+                        i.far.fa-star 1 Review(S) | Add Your Review
+                        hr
+                        h4 Màu sắc
+                        span.yelow
+                        span.black
+                        span.red
+                        h4 kích cỡ
+                        button.buttondrop Loại to    
+                            i.fas.fa-sort-down
+                        h4 số lượng
+                        button.buttonplus
+                            i.fas.fa-minus
+                            span 3
+                            i.fas.fa-plus
+                        button.button add to cart 
+                        .product__describition__vote
+                            .row
+                                .col-lg-4
+                                    i.fas.fa-heart    Yêu thích
+                                .col-lg-4
+                                    i.far.fa-chart-bar    So sánh
+                                .col-lg-4
+                                    i.fas.fa-envelope      Email
+                        h4 mô tả
+                        p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                        img(src="image/share.png", alt="")
+            .detailproduct__infor 
+                .row
+                    .col-lg-6
+                        .detailproduct__infor__tag
+                            a(href="#") đặc điểm nổi bật
+                            a(href="#") thông tin sản phẩm
+                            a(href="#") đánh giá
+                        .detailproduct__infor__text 
+                            p.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                    .col-lg-6
+                        .detailproduct__infor__img
+                            img(src="image/staticblock_6.png", alt="")
+                            h1 Rượu nho
+            section#hotproduct.hotproduct
+                .container
+                    .hotproduct__title
+                            h1.title Sản phẩm liên quan
+                            img(src="image/title_dark.png", alt="title_dark")
+                    .row
+                        - var list= ["hotproduct_1.png","hotproduct_2.png","hotproduct_3.png","hotproduct_4.png"]
+                            each url in list
+                                .col-lg-3
+                                    .hotproduct__card
+                                        .hotproduct__card__img
+                                            img(src='image/'+ url, alt="ruou vang da lat")
+                                        .hotproduct__card__infor
+                                            h3 rượu vang đà lạt
+                                            h5 370.000
+                                                sup đ
+                                                    del - 450.000
+                                                        sup đ
+                                            button.button add to cart 
+    include footer.pug
