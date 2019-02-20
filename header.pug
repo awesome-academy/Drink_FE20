@@ -1,0 +1,15 @@
+
+header#header.header.header-intro
+        .container
+            .row
+                .col-lg-8     
+                    .header__menu
+                        ul
+                            -var list= [{link:'error404.html',text:'Tài khoản của tôi'},{link:'orders.html',text:'Trạng thái đơn hàng'},{link:'#',text:'Danh sách ưa thích'},{link:'cart.html',text:'Giỏ hàng'},{link:'login.html',text:'Đăng nhập'},{link:'register.html',text: 'Đăng ký'}]
+                                each val in list
+                                    li
+                                        a(href=val.link)= val.text
+                .col-lg-4
+                    .header__search
+                        input(type='text', name='search',placeholder='Tìm kiếm ở đây ...')
+                        i.fas.fa-search

@@ -1,0 +1,37 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#cart.cart
+        .container
+            .cart__title
+                p
+                    a(href='#') Trang chủ/Sản phẩm/
+                        span Giỏ hàng
+                h3 Giỏ hàng
+                img(src="image/titleleft-dark.png", alt="")
+            .cart__table
+                table
+                    tr
+                        - var list=['Ảnh','tên sản phẩm','giá','số lượng','tổng số','xóa']
+                            each item in list
+                                th= item
+                    - for (var x = 0; x < 4; x++)
+                        tr
+                            td
+                                img(src="image/detailproduct_1.png", alt="")
+                            td Rượu vang đỏ
+                            td
+                                p 345.000
+                                    sup đ
+                            td 1
+                            td
+                                p 345.000
+                                    sup đ
+                            td
+                                i.fas.fa-trash-alt
+            .cart__btn
+                button.button tiếp tục mua hàng
+                button.button Xóa
+                button.button cập nhật
+    include footer.pug           
