@@ -1,0 +1,221 @@
+include head.pug
+body
+    header#header.header
+        .container
+            .row
+                .col-lg-8     
+                    .header__menu
+                        ul
+                            -var list= ['Tài khoản của tôi','Trạng thái đơn hàng','Danh sách ưa thích','Giỏ hàng','Đăng nhập', 'Đăng ký']
+                                each val in list
+                                    li
+                                        a(href='#')= val
+                .col-lg-4
+                    .header__search
+                        input(type='text', name='search',placeholder='Tìm kiếm ở đây ...')
+                        i.fas.fa-search
+    section#banner.banner
+        .banner__group
+            h2.banner__max Rượu
+            h3.banner__min Vang Đỏ
+            h4.banner__small Since 1980
+    include menu.pug
+    section#introduce.introduce
+        .container
+            img(class="introduce__left", src="image/introduce.jpg", alt="introduce_left")
+            img(class="introduce__right", src="image/introduce1.png", alt="introduce_right")
+            h1.title Giới thiệu
+            img(class="after", src="image/title_dark.png", alt="title_dark")
+            .introduce__infor
+                p.
+                    Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam
+                button.button xem thêm
+    section#hotdeal.hotdeal
+        .container
+            .hotdeal__banner
+                img(class="imgbanner",src="image/hotdeal.jpg", alt="")
+                .hotdeal__banner__box
+                    .row
+                        .col-lg-6
+                            .hotdeal__banner__box__img
+                                .hotdeal__banner__box__img--hin
+                                    img(src="image/hotdeal_box.png", alt="hotdeal_box")
+                            .hotdeal__banner__box__img--tag
+                                    span Sale
+                                    img(src="image/sale.png", alt="")
+                        .col-lg-6
+                            .hotdeal__banner__box__infor
+                                h2 rượu nho năm 1987
+                                img(src="image/titleleft-dark.png", alt="")
+                                h5 330.000
+                                    sup đ
+                                button.button add to cart
+                                p.
+                                    Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ.
+                                    Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                                .hotdeal__banner__box__infor__table
+                                    -var list= [{number:'334',time:'ngày'},{number:'26',time:'giờ'},{number:'60',time:'phút '},{number:'15',time:'giây'}]
+                                        each value in list
+                                            .hotdeal__banner__box__infor__table--item
+                                                h4 #{value.number}
+                                                h5 #{value.time}
+    section#newproduct.newproduct
+        .container
+            .newproduct__title
+                h1.title Sản phẩm mới
+                img(src="image/title_dark.png", alt="title_dark")
+            .row
+                .col-lg-3
+                    .newproduct__card
+                        .newproduct__card__img
+                            img(src='image/newproduct_1.png', alt="ruou vang da lat")
+                        .newproduct__card__tag--sale
+                            .newproduct__card__tag--span
+                                span Sale
+                        .newproduct__card__vote
+                            .row
+                                .col-lg-6
+                                    i.fas.fa-heart    yêu thích
+                                .col-lg-6
+                                    i.far.fa-chart-bar    so sánh
+                        .newproduct__card__infor
+                            h3 rượu vang đà lạt
+                            h5 370.000
+                                sup đ
+                                    del - 450.000
+                                        sup đ
+                            button.button add to cart
+                .col-lg-3
+                    .newproduct__card
+                        .newproduct__card__img
+                            img(src='image/newproduct_2.png', alt="ruou vang da lat")
+                        .newproduct__card__tag--new
+                            .newproduct__card__tag--span
+                                span Mới
+                        .newproduct__card__vote
+                            .row
+                                .col-lg-6
+                                    i.fas.fa-heart    yêu thích
+                                .col-lg-6
+                                    i.far.fa-chart-bar    so sánh
+                        .newproduct__card__infor
+                            h3 rượu vang đà lạt
+                            h5 370.000
+                                sup đ
+                                    del - 450.000
+                                        sup đ
+                            button.button add to cart
+                .col-lg-3
+                    .newproduct__card
+                        .newproduct__card__img
+                            img(src='image/newproduct_3.png', alt="ruou vang da lat")
+                        .newproduct__card__tag--hot
+                            .newproduct__card__tag--span
+                                span Hot
+                        .newproduct__card__vote
+                            .row
+                                .col-lg-6
+                                    i.fas.fa-heart    yêu thích
+                                .col-lg-6
+                                    i.far.fa-chart-bar    so sánh
+                        .newproduct__card__infor
+                            h3 rượu vang đà lạt
+                            h5 370.000
+                                sup đ
+                                    del - 450.000
+                                        sup đ
+                            button.button add to cart
+                .col-lg-3
+                    .newproduct__card
+                        .newproduct__card__img
+                            img(src='image/newproduct_4.png', alt="ruou vang da lat")
+                        .newproduct__card__vote
+                            .row
+                                .col-lg-6
+                                    i.fas.fa-heart    yêu thích
+                                .col-lg-6
+                                    i.far.fa-chart-bar    so sánh
+                        .newproduct__card__infor
+                            h3 rượu vang đà lạt
+                            h5 370.000
+                                sup đ
+                                    del - 450.000
+                                        sup đ
+                            button.button add to cart
+    section#staticblock.staticblock
+        - var list =["staticblock_1.png","staticblock_2.jpg","staticblock_3.png","staticblock_4.png","staticblock_5.png","staticblock_6.png","staticblock_7.png","staticblock_8.png"]
+            each url in list 
+                .staticblock__box
+                    .staticblock__box__img
+                        img(src='image/' + url , alt="staticblock")
+                    .staticblock__box__describition
+                        p 1987
+                        .staticblock__box__describition__hover
+                            .overload
+                                h1 rượu
+    section#hotproduct.hotproduct
+        .container
+            .hotproduct__title
+                    h1.title Sản phẩm bán chạy
+                    img(src="image/title_dark.png", alt="title_dark")
+            .row
+                - var list= ["hotproduct_1.png","hotproduct_2.png","hotproduct_3.png","hotproduct_4.png"]
+                    each url in list
+                        .col-lg-3
+                            .hotproduct__card
+                                .hotproduct__card__img
+                                    img(src='image/'+ url, alt="ruou vang da lat")
+                                .hotproduct__card__infor
+                                    h3 rượu vang đà lạt
+                                    h5 370.000
+                                        sup đ
+                                            del - 450.000
+                                                sup đ
+                                    button.button add to cart 
+    section#double.double
+        .container
+            .row
+                .col-lg-8
+                    #blog.blog.blog--blog
+                        .container
+                            .hotproduct__title
+                                h1.title tin tức & blog
+                                img(src="image/title_dark.png", alt="title_dark")
+                            .row
+                                - var list3 =['blog_1.png','blog_2.png']
+                                    each url in list3
+                                        .col-lg-6
+                                            .blog__card
+                                                .blog__card__img
+                                                    .blog__card__overload
+                                                        img(src='image/' + url, alt="")
+                                                        .blog__card__hover
+                                                            .icon
+                                                                i.fas.fa-link
+                                                .blog__card__infor
+                                                    h2 Vang thang Long classic
+                                                    span Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+                                                    p.
+                                                        Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                                        rượu nhẹ, bột ga đầy trắng mịn.
+                                                        Van nổ Thăng Long ...
+                                                    a(href="") Read more
+                .col-lg-4
+                    #customer.customer
+                        .container
+                            h1.title Khách hàng
+                            img(src="image/title_dark.png", alt="title_dark")
+                            .customer__icon
+                                i.fas.fa-quote-right
+                            p.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Van nổ Thăng Long ...
+                            a(href='#') Read more
+                            .customer__card
+                                .customer__card__img
+                                    img(src="image/avatar_1.png", alt="avatar")
+                                .customer__card__infor
+                                    h3 giang lt
+                                    i Graphic design
+    include footer.pug
