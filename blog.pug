@@ -1,0 +1,33 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#blog.blog
+        .container
+            .blog__title
+                p
+                    a(href='#') Trang chủ/
+                        span Blog
+                h3 blog
+                img(src="image/titleleft-dark.png", alt="")
+            .row
+                - for (var x = 0; x < 3; x++)
+                    - var list=['blog_1.png','blog_2.png','blog_1.png']
+                    each url in list
+                        .col-lg-4    
+                            .blog__card
+                                .blog__card__img
+                                    .blog__card__overload
+                                        img(src='image/' + url, alt="")
+                                        .blog__card__hover
+                                            .icon
+                                                i.fas.fa-link
+                                .blog__card__infor
+                                    h2 Vang thang Long classic
+                                    span Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+                                    p.
+                                        Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                        rượu nhẹ, bột ga đầy trắng mịn.
+                                        Van nổ Thăng Long ...
+                                    a(href="") Read more
+    include footer.pug

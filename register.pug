@@ -1,0 +1,47 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#register.register
+        .container
+            .register__title
+                p
+                    a(href='#') Trang chủ/
+                        span Giới thiệu
+                .row
+                    .col-lg-10
+                        h3 đăng ký
+                        img(src="image/titleleft-dark.png", alt="")
+                    .col-lg-2
+                        button.button đăng nhập
+            .register__form
+                .content
+                    h4 thông tin cá nhân
+                    .register__form__input
+                        label(for="name") Tên trước* :
+                        input(type="text",name="name")
+                    .register__form__input
+                        label(for="name") Tên sau* :
+                        input(type="text",name="name")
+                    .register__form__input
+                        label(for="email") Email* :
+                        input(type="email",name="email")
+                    .register__form__input
+                        label(for="password") Password* :
+                        input(type="password", name="password")
+                    .register__form__checkbox
+                        label(for="span")
+                        input(class="checkbox", type="checkbox",name="remember")
+                        label Đăng ký nhận bản tin
+                    h4 thông tin đăng nhập
+                    .register__form__input
+                        label(for="password") Mật khẩu* :
+                        input(type="password", name="password")
+                    .register__form__input
+                        label(for="password") Xác nhận mật khẩu* :
+                        input(type="password", name="repassword")
+                    button.button Quay lại
+                    button.button gửi
+    include footer.pug
+                
+                

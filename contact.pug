@@ -1,0 +1,73 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#contact.contact
+        .container
+            .contact__title
+                p
+                    a(href='#') Trang chủ/
+                        span Địa chỉ
+                h3 Liên Hệ
+                img(src="image/titleleft-dark.png", alt="")
+            .row
+                .col-lg-8
+                    .contact__map
+                        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d667.2830072993363!2d105.8090406967228!3d21.03948459568106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab1461382fdb%3A0xa6dddaacdfb96871!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gQ8O0bmcgbmdo4buHIERLVA!5e0!3m2!1svi!2s!4v1550915945316"
+                         frameborder="0" style="border:0" allowfullscreen)
+                .col-lg-4
+                    .contact__infor
+                        .contact__infor__logo.menu__logo
+                            .menu__logo__background
+                                img(src="image/Vector Smart Object.png", alt="")
+                            .menu__logo__text
+                                h2 Wine hourse
+                                h4 Since 1980
+                                img(src="image/logo.png", alt="logo")
+                        .contact__infor__text
+                            p
+                                i.fas.fa-map-marker-alt   Tầng 4,Tòa nhà HaNoi Group Số 442 Đội Cần, P.Cộng Vị, Quận Ba Đình, Hà Nội.
+                                br
+                                i.fas.fa-phone-volume   (08) 6608 9686  
+                                br    
+                                i.fas.fa-envelope
+                                    a(href='#')   Support@bizweb.vn
+                        .contact__infor__follow
+                                h3 follow us:
+                                ul
+                                    li
+                                        a(href='#')
+                                            i.fas.fa-dove
+                                    li
+                                        a(href='#')
+                                            i.fab.fa-google-plus-g
+                                    li
+                                        a(href='#')
+                                            i.fas.fa-volleyball-ball
+                                    li
+                                        a(href='#')
+                                            i.fab.fa-invision
+                                    li
+                                        a(href='#')
+                                            i.fas.fa-wifi
+            .row
+                .col-lg-8
+                    .contact__form
+                        .contact__form__input
+                            label(for="name") Your Name
+                            input(type="text",name="name")
+                        .contact__form__input
+                            label(for="email") Your Email
+                            input(type="email",name="email")
+                        .contact__form__input
+                            label(for="subject") Subject
+                            input(type="text",name="subject")
+                        .contact__form__input
+                            label(for="message") Your Message
+                            textarea(name="message", cols="30", rows="6")
+                        .contact__form__button
+                            label(for="span")
+                            button.button Gửi
+    include footer.pug
+
+                        
