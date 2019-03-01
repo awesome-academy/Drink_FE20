@@ -1,0 +1,81 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#product.product
+        .container
+            .product__title
+                p
+                    a(href="index.html") Trang chủ/Sản phẩm/
+                        span Rượu vang đỏ
+            .product__banner
+            .row
+                .col-lg-4
+                    .product__menu
+                        .product__menu__title
+                            h3 danh mục sản phẩm
+                            img(src="image/titleleft-dark.png", alt="")
+                        nav.product__menu__list
+                            ul
+                                li 
+                                    h4 rượu ngoại
+                                - for (var x = 0; x < 3; x++)
+                                    - var list= ['Rượu Chivas(26)','Hàng độc-Rượu đọc đáo(36)','Johnnie Walker(46)','Rượu Whisky(24)','Rượu Reni Martin(16)','Rượu Glenmorangie(11)']
+                                        each item in list
+                                            li
+                                                a(href="#")= item
+                                li 
+                                    h4 rượu vang
+                                - for (var x = 0; x < 7; x++)
+                                    li
+                                        a(href="#") Rượu Vang Pháp(26)
+                        .product__menu__title
+                            h3 so sánh sản phẩm
+                            img(src="image/titleleft-dark.png", alt="") 
+                            p Bạn chưa có sản phẩm nào để so sánh
+                        .product__menu__title
+                            h3 tag sản phẩm
+                            img(src="image/titleleft-dark.png", alt="")
+                        .product__menu__a
+                            - var list1 =['Đồng hồ','Túi','Phụ kiện','Giày','Sandal','Áo sơ mi','Nước hoa','Trẻ em','Thời trang nữ']
+                                each item in list1
+                                    a(href="#")= item
+                        .product__menu__banner
+                .col-lg-8
+                    .product__paging
+                        .row
+                            .col-lg-2
+                                i.fas.fa-th-list
+                                i.fas.fa-list
+                            .col-lg-6
+                            .col-lg-4
+                                ul
+                                    i.fas.fa-caret-left
+                                    each val in [1, 2, 3, 4, 5]
+                                        li
+                                            a(href="#")= val
+                                    i.fas.fa-caret-right
+                    .product--list
+                        - var list= ["hotproduct_4.png","hotproduct_3.png","hotproduct_4.png","hotproduct_3.png"]
+                            each url in list
+                                .product--list__card
+                                    .row
+                                        .col-lg-4
+                                            .product--list__card__img
+                                                img(src='image/'+ url, alt="ruou vang da lat")
+                                        .col-lg-8
+                                            .product--list__card__infor
+                                                h3 rượu nho năm 1987
+                                                h5 330.000
+                                                    sup đ
+                                                p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ.Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                                            .product--list__card__vote
+                                                .row
+                                                    .col-lg-6
+                                                        button.button add to cart 
+                                                    .col-lg-3
+                                                        i.fas.fa-heart    Yêu thích
+                                                    .col-lg-3
+                                                        i.far.fa-chart-bar    So sánh
+                                hr
+    include footer.pug   
