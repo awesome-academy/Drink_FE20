@@ -1,0 +1,30 @@
+include head.pug
+body
+    #error.error
+        .error__banner
+            .error__banner__background
+                .error__banner__text
+                    h1 Lỗi
+                    h2 Đây không phải là
+                    h3 trang web bạn đang tìm kiếm
+            .error__banner__404
+                img(src="image/404.png", alt="")
+            .error__banner__box
+                img(src="image/Loi404.png", alt="")
+        .error__content
+            .container
+                .row
+                    .col-lg-2
+                        .menu__logo
+                            img(src="image/logo_error.png", alt="")
+                    .col-lg-3
+                        .error__content__menu
+                            ul
+                                li
+                                    a(href="index.html") trang chủ  
+                                        i.fas.fa-caret-right
+                                li
+                                    a(href="contact.html") liên hệ  
+                                        i.fas.fa-caret-right
+                    .col-lg-3
+                        input(type='text', name='search',placeholder='search')

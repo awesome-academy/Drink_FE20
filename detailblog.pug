@@ -1,0 +1,100 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#detailblog.detailblog
+        .container
+            .detailblog__title
+                p
+                    a(href='#') Trang chủ/
+                        span Blog
+                h3 blog
+                img(src="image/titleleft-dark.png", alt="")
+            .row
+                .col-lg-4
+                    .detailblog__newblog
+                        h4 bài viết mới nhất
+                        - for (var x = 0; x < 3; x++)
+                            .detailblog__newblog__card
+                                .row
+                                    .col-lg-4
+                                        .detailblog__newblog__card__img
+                                            img(src="image/detailblog.png", alt="")
+                                    .col-lg-8
+                                        .detailblog__newblog__card__infor 
+                                            h5 cách sắp xếp nội thất trong nhà
+                                            i.far.fa-calendar 12/06/2015
+                        .detailblog__tag
+                            h4 blog tags
+                            a(href="#") Đồng hồ
+                            a(href="#") Túi
+                            br
+                            br
+                            - var list=['Phụ kiện','Giày','Sandal','Áo sơ mi']
+                            each item in list
+                                a(href="#")= item
+                            br
+                            br
+                            - var list=['Nước hoa','Trẻ em','Thời trang nữ']
+                            each item in list
+                                a(href="#")= item
+                        .detailblog__video
+                            h4 latest video
+                            img(src="image/video.png", alt="")
+                .col-lg-8
+                    .detailblog__infoblog
+                        .detailblog__infoblog__img
+                            img(src="image/blog_1.png", alt="")
+                        .detailblog__infoblog__infor
+                            h2 Vang thang Long classic
+                            span Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+                            p.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Van nổ Thăng Long ...
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Van nổ Thăng Long ...
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Van nổ Thăng Long ...
+                    .detailblog__opinion
+                        h4 đóng góp ý kiến
+                        .detailblog__opinion__input
+                            label(for="name") Tên *
+                            input(type="text",name="name")
+                        .detailblog__opinion__input
+                            label(for="email") Email *
+                            input(type="email",name="email")
+                        .detailblog__opinion__input
+                            label(for="message") Ý kiến *
+                            textarea(name="message", cols="30", rows="6")
+                        .detailblog__opinion__button
+                            label(for="span")
+                            button.button Gửi ý kiến
+                    .detailblog__comment
+                        h4 bình luận(4)
+                        - for (var x = 0; x < 3; x++)
+                            .detailblog__comment__title
+                                .row
+                                    .col-lg-10
+                                        i Bình luận bởi Giangle  | Cách đây 4 giờ
+                                    .col-lg-2
+                                        a(href="answer") Trả lời
+                            .detailblog__comment__message
+                                p.
+                                    Có lẽ bởi tính ăn gian vóc giáng và vô cùng thỏa mái, gợi cảm mà cả hai dạng trang phục này 
+                                    được áp dụng nhiều nhất trong street style tuần qua, chọn cho mình bộ trang phục đơn sắc với 
+                                    thiết kế cổ yếm, ống rộng - vừa thỏa ái tối đa lại không kém phàn gợi cảm, kết hợp cùng lâu giày
+                                    quai chữ T tôn dáng
+                        .detailblog__comment__paging
+                            .row
+                                .col-lg-6
+                                .col-lg-6
+                                        ul
+                                            i.fas.fa-caret-left
+                                            each val in [1, 2, 3]
+                                                li
+                                                    a(href="#")= val
+                                            i.fas.fa-caret-right
+    include footer.pug

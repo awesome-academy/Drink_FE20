@@ -1,0 +1,42 @@
+include head.pug
+body
+    include header.pug
+    include menu.pug
+    section#orders.orders
+        .container
+            .orders__title
+                p
+                    a(href='index.html') Trang chủ/
+                        span Danh sách đơn hàng
+                h3 Đơn hàng
+                img(src="image/titleleft-dark.png", alt="")
+            .row
+                .col-lg-8
+                    .orders__box
+                        h3 danh sách đơn hàng
+                        p Trạng thái tất cả(16) | Đã hủy(10) | Chưa duyệt(0) | Đã duyệt(0) | Đã thanh toán-chờ mua hàng(0) | Đã mua hàng(0) | Hàng đã về-chờ giao hàng(0) | Đã kết thúc(6)
+                    .orders__table
+                        table
+                            tr
+                                - var list=['stt','mã hóa đơn hàng mua hàng','kho ngân hàng','số sp','tổng tiền','tình trạng','thao tác']
+                                    each item in list
+                                        th= item
+                            - for (var x = 0; x < 6; x++)
+                                tr
+                                    td 01
+                                    td
+                                        p leanhgiang89 - 17/06/2015
+                                        span 01:36 14/03/2015
+                                    - var list1=['Hà Đông','7','350.00đ','Đã thanh toán','Chi tiết']
+                                        each val in list1
+                                    td= val
+                .col-lg-4
+                    .orders__infor
+                        h3 thông tin khách hàng
+                        i.fas.fa-user-alt     GiangLe
+                        i.fas.fa-map-marker-alt   Tầng 4,Tòa nhà HaNoi Group Số 442 Đội Cần, P.Cộng Vị, Quận Ba ĐÌnh, Hà Nội.
+                        br
+                        i.fas.fa-phone-volume   (08) 6608 9686  
+                        br
+                        a(href="#") Chi tiết đơn hàng
+    include footer.pug
