@@ -1,0 +1,18 @@
+include index.pug
+    section#popup.popup
+        .container
+            .row
+                .col-lg-4
+                    .popup__img
+                        img(src="image/chai.png", alt="")
+                .col-lg-8
+                    .popup__message
+                        h2 Gửi Email
+                        p Đăng ký email ngay hôm nay để nhận được thông tin về sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!
+                        input(type="text", name="email", placeholder="Email của bạn...")
+                        button.button Gửi email
+                        .popup__message__input
+                            input(type="checkbox", name="checkbox")
+                            label(for="notification") không hiển thị lại thông báo này
+                        .popup__message__icon
+                            i.fas.fa-times

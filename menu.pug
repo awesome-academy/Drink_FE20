@@ -1,0 +1,35 @@
+section#menu.menu
+    .container
+        .row
+            .col-lg-2
+                .menu__logo
+                    .menu__logo__background
+                        img(src="image/Vector Smart Object.png", alt="")
+                    .menu__logo__text
+                        h2 Wine hourse
+                        h4 Since 1980
+                        img(src="image/logo.png", alt="logo")
+            .col-lg-10
+                .menu__list
+                    ul
+                        li
+                            a(href="index.html") Trang chủ
+                        li.dropdown
+                            a(href="detailproduct.html") Rượu vang đỏ
+                            .dropdown__mega
+                                i.fas.fa-caret-up
+                                .mega__infor
+                                    - for (var x = 0; x < 3; x++)
+                                        ul
+                                            li
+                                                h3 rượu ngoại
+                                            - var list=['Rượu Chivar','Hàng độc - rượu đọc đáo','Johnnie Walker','Rượu Whisky','Rượu Reni Martin','Rượu Glenmorangie']
+                                                each item in list
+                                                    li
+                                                        a(href="#")= item
+                                .mega__img
+                                    img(src="image/mega.png", alt="")
+                        -var list= [{link:'#',text:'Rượu vang trắng'},{link:'#',text:'Champagne'},{link:'about.html',text:'Thông tin'},{link:'blog.html',text: 'Blog'},{link:'contact.html',text: 'Liên hệ'}]
+                            each val in list
+                                li
+                                    a(href=val.link)= val.text
